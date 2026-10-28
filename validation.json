@@ -139,7 +139,7 @@
     "query_excluded": true,
     "fallback_test": "Transparent genre-and-quality fallback"
   },
-  "elapsed_seconds": 33.477959334035404,
+  "elapsed_seconds": 34.02212270803284,
   "python": "3.12.14",
   "versions": {
     "numpy": "2.3.5",
@@ -161,9 +161,12 @@
   "privacy": "No raw ratings, tags, user IDs or local source paths redistributed; MovieLens research/noncommercial terms apply to derived output.",
   "execution": {
     "fresh_kernel": true,
+    "executed_at_utc": "2026-10-28T20:43:27.006614+00:00",
+    "kernel_uses_runner_interpreter": true,
     "executed_code_cells": 10,
     "saved_errors": 0,
-    "wall_seconds": 34.75211895897519,
-    "notebook_sha256": "ac8877aa475fc11ba95cbcf1a50fea5a27e9fc9d4732d072a92b576bcb39dfce"
+    "wall_seconds": 35.06023449997883,
+    "notebook_sha256": "91758db764c82247bc9fb6e4173c1411246fbdf3aee1edcc45fac5619ee92fe6",
+    "runner_sha256": "479894402a11e24fd769d769343e9c1d2580695d5e3485c5d6dbcf7cc492cb47"
   }
 }
