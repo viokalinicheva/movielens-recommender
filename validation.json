@@ -1,0 +1,169 @@
+{
+  "project": "MovieLens Recommendation System with Collaborative Filtering",
+  "validated_on": "2026-10-28",
+  "source_notebook_sha256": "7d1d82ffdbcae9eff9305be989ba0e6d35dea46e52446e9a491559609b55149c",
+  "raw_sha256": {
+    "movies.csv": "b37ca1abc7798de741138ed252b62f69f7e37c84b8a8fab1b82d409b4c6c5cc2",
+    "ratings.csv": "91159850e41ee59c86231165a688709647e2726cab2e7ba9faf04001bd5261ee",
+    "tags.csv": "c52e458a89b9deee410f50813e7a64491fbe92a6f07b5c4b58e64c0b3cc95b89",
+    "links.csv": "ef17da7710be76f7d510d5768d1b61826e3af4bf57812b9ca377e4c912123b22",
+    "README.txt": "aadef501245798f04f085b1edc024bad41343e0f065b5e4682eff38d54e1cb32",
+    "checksums.txt": "99ba602a83a00640aa40a5862212de7c16558499b9efced3cc63a470b88e6758"
+  },
+  "audit": {
+    "ratings": 32000204,
+    "catalog_movies": 87585,
+    "active_users": 200948,
+    "positive_interactions": 15938231,
+    "invalid_ratings": 0,
+    "duplicate_rating_pairs": 0,
+    "rating_start": "1995-01-09 11:46:44+00:00",
+    "rating_end": "2023-10-13 02:29:07+00:00",
+    "title_whitespace_normalized": 156
+  },
+  "model": {
+    "factors": 64,
+    "eligible_movies": 13280,
+    "sparse_interactions": 15740145,
+    "matrix_megabytes": 120.1384391784668,
+    "validation_users": 9975,
+    "test_users": 9975,
+    "test_covered_pairs": 9769,
+    "same_second_evaluation_pairs": 2093
+  },
+  "validation_metrics": [
+    {
+      "Model": "Global Popularity Baseline",
+      "Model_Family": "Baseline",
+      "Latent_Dimensions": 0,
+      "Explained_Variance": null,
+      "Validation_Pairs": 9807,
+      "Pair_Coverage": 0.9831578947368421,
+      "Hit_Count": 323,
+      "Hit_Rate_At_10": 0.032935658203324156,
+      "Hit_Rate_CI_Lower": 0.029582275407987805,
+      "Hit_Rate_CI_Upper": 0.03665481479230651,
+      "Recall_At_10": 0.032935658203324156,
+      "MRR_At_10": 0.010532523739926613,
+      "NDCG_At_10": 0.015642465577038515,
+      "Coverage_Adjusted_Hit_Rate_At_10": 0.03238095238095238,
+      "Recommendation_Catalog_Coverage": 0.0008283132530120482
+    },
+    {
+      "Model": "TF-IDF SVD Collaborative (16 factors)",
+      "Model_Family": "Collaborative Filtering",
+      "Latent_Dimensions": 16,
+      "Explained_Variance": 0.04227231442928314,
+      "Validation_Pairs": 9807,
+      "Pair_Coverage": 0.9831578947368421,
+      "Hit_Count": 735,
+      "Hit_Rate_At_10": 0.07494646680942184,
+      "Hit_Rate_CI_Lower": 0.06989995533072113,
+      "Hit_Rate_CI_Upper": 0.08032585200470663,
+      "Recall_At_10": 0.07494646680942184,
+      "MRR_At_10": 0.03179394051220298,
+      "NDCG_At_10": 0.041813269842530386,
+      "Coverage_Adjusted_Hit_Rate_At_10": 0.07368421052631578,
+      "Recommendation_Catalog_Coverage": 0.6340361445783133
+    },
+    {
+      "Model": "TF-IDF SVD Collaborative (32 factors)",
+      "Model_Family": "Collaborative Filtering",
+      "Latent_Dimensions": 32,
+      "Explained_Variance": 0.05791754648089409,
+      "Validation_Pairs": 9807,
+      "Pair_Coverage": 0.9831578947368421,
+      "Hit_Count": 802,
+      "Hit_Rate_At_10": 0.0817783216070154,
+      "Hit_Rate_CI_Lower": 0.07651715791377771,
+      "Hit_Rate_CI_Upper": 0.0873670087615868,
+      "Recall_At_10": 0.0817783216070154,
+      "MRR_At_10": 0.03438805453182939,
+      "NDCG_At_10": 0.045383485164970046,
+      "Coverage_Adjusted_Hit_Rate_At_10": 0.08040100250626567,
+      "Recommendation_Catalog_Coverage": 0.6201807228915662
+    },
+    {
+      "Model": "TF-IDF SVD Collaborative (64 factors)",
+      "Model_Family": "Collaborative Filtering",
+      "Latent_Dimensions": 64,
+      "Explained_Variance": 0.07666140049695969,
+      "Validation_Pairs": 9807,
+      "Pair_Coverage": 0.9831578947368421,
+      "Hit_Count": 851,
+      "Hit_Rate_At_10": 0.08677475272764353,
+      "Hit_Rate_CI_Lower": 0.08136378024774185,
+      "Hit_Rate_CI_Upper": 0.09250933579563611,
+      "Recall_At_10": 0.08677475272764353,
+      "MRR_At_10": 0.03658858023342575,
+      "NDCG_At_10": 0.048271386852149656,
+      "Coverage_Adjusted_Hit_Rate_At_10": 0.08531328320802005,
+      "Recommendation_Catalog_Coverage": 0.5966867469879518
+    }
+  ],
+  "test_popularity": {
+    "Validation_Pairs": 9769,
+    "Pair_Coverage": 0.9793483709273183,
+    "Hit_Count": 309,
+    "Hit_Rate_At_10": 0.031630668440986796,
+    "Hit_Rate_CI_Lower": 0.02833997148319364,
+    "Hit_Rate_CI_Upper": 0.03528958739556687,
+    "Recall_At_10": 0.031630668440986796,
+    "MRR_At_10": 0.010743532749367533,
+    "NDCG_At_10": 0.015541577921246589,
+    "Coverage_Adjusted_Hit_Rate_At_10": 0.030977443609022555,
+    "Recommendation_Catalog_Coverage": 0.0008283132530120482
+  },
+  "test_collaborative": {
+    "Validation_Pairs": 9769,
+    "Pair_Coverage": 0.9793483709273183,
+    "Hit_Count": 878,
+    "Hit_Rate_At_10": 0.0898761388064285,
+    "Hit_Rate_CI_Lower": 0.0843646054199917,
+    "Hit_Rate_CI_Upper": 0.0957101028409096,
+    "Recall_At_10": 0.0898761388064285,
+    "MRR_At_10": 0.03689680021187852,
+    "NDCG_At_10": 0.04922935304701273,
+    "Coverage_Adjusted_Hit_Rate_At_10": 0.08802005012531329,
+    "Recommendation_Catalog_Coverage": 0.5975150602409639
+  },
+  "paired_difference": {
+    "hit_rate": 0.058245470365441705,
+    "ci_lower": 0.05169157539154468,
+    "ci_upper": 0.06479680622376907,
+    "p_value": 8.268430457529082e-71
+  },
+  "interface_checks": {
+    "recommendations": 10,
+    "unique": 10,
+    "query_excluded": true,
+    "fallback_test": "Transparent genre-and-quality fallback"
+  },
+  "elapsed_seconds": 33.477959334035404,
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "scikit-learn": "1.9.1",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.3.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "sources_verified_on": "2026-10-28",
+  "sources": [
+    "https://files.grouplens.org/datasets/movielens/ml-32m-README.html",
+    "https://doi.org/10.1145/2827872"
+  ],
+  "privacy": "No raw ratings, tags, user IDs or local source paths redistributed; MovieLens research/noncommercial terms apply to derived output.",
+  "execution": {
+    "fresh_kernel": true,
+    "executed_code_cells": 10,
+    "saved_errors": 0,
+    "wall_seconds": 34.75211895897519,
+    "notebook_sha256": "ac8877aa475fc11ba95cbcf1a50fea5a27e9fc9d4732d072a92b576bcb39dfce"
+  }
+}
